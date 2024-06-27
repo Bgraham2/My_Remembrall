@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/buttonSettings"
         android:title="@string/settings"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_action_settings"/>
 
     <item
         android:id="@+id/buttonRefresh"
         android:title="@string/refresh"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_action_refresh"/>
 
     <item
         android:id="@+id/buttonAdd"
         android:title="@string/add_task"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_action_add"/>
 
 </menu>
