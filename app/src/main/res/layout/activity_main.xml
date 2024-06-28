@@ -30,14 +30,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDayDate" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
         android:background="@color/celtic_blue"
-        app:menu="@menu/bottom_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" >
 
+        <Button
+            android:id="@+id/buttonSettings"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/celtic_blue"
+            android:drawableStart="@drawable/ic_action_settings"
+            android:padding="16dp"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/buttonRefresh"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/celtic_blue"
+            android:drawableStart="@drawable/ic_action_refresh"
+            android:padding="16dp"
+            android:text="@string/refresh"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/celtic_blue"
+            android:drawableStart="@drawable/ic_action_add"
+            android:padding="16dp"
+            android:text="@string/add_task"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

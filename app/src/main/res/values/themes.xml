@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MyRemembrall" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.MyRemembrall" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/dark_blue</item>
@@ -8,8 +8,4 @@
     </style>
 
     <style name="Theme.MyRemembrall" parent="Base.Theme.MyRemembrall" />
-    <style name="NavTheme" parent="Base.Theme.MyRemembrall">
-        <item name="actionMenuTextColor">@color/white</item>
-        <item name="android:actionMenuTextColor">@color/white</item>
-    </style>
 </resources>
