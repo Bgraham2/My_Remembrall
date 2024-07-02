@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/day_and_date"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:background="@color/celtic_blue"
@@ -33,7 +33,7 @@
     <LinearLayout
         android:id="@+id/layoutButtons"
         style="?android:attr/buttonBarStyle"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/celtic_blue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,8 @@
             android:text="@string/settings"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:autoSizeTextType="uniform" />
+            android:autoSizeTextType="uniform"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonRefresh"
@@ -66,7 +67,8 @@
             android:text="@string/refresh"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:autoSizeTextType="uniform" />
+            android:autoSizeTextType="uniform"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonAdd"
@@ -80,7 +82,8 @@
             android:text="@string/add_task"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:autoSizeTextType="uniform" />
+            android:autoSizeTextType="uniform"
+            tools:ignore="VisualLintButtonSize" />
 
     </LinearLayout>
 
