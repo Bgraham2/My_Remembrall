@@ -1,20 +1,24 @@
 package com.example.myremembrall;
 
-import java.util.Date;
-
 public class Tasks {
     private String taskName;
-    private String day;
-    private String type;
-    private Date date;
-    private Date time;
+    private String monday;
+    private String tuesday;
+    private String wednesday;
+    private String thursday;
+    private String friday;
+    private String saturday;
+    private String sunday;
 
-    public Tasks(String taskName, String day, String type, Date date, Date time) {
+    public Tasks(String taskName, String monday, String tuesday, String wednesday, String thursday, String friday, String saturday, String sunday) {
         this.taskName = taskName;
-        this.day = day;
-        this.type = type;
-        this.date = date;
-        this.time = time;
+        this.monday = monday;
+        this.tuesday = tuesday;
+        this.wednesday = wednesday;
+        this.thursday = thursday;
+        this.friday = friday;
+        this.saturday = saturday;
+        this.sunday = sunday;
     }
 
     public String getTaskName() {
@@ -25,35 +29,59 @@ public class Tasks {
         this.taskName = taskName;
     }
 
-    public String getDay() {
-        return day;
+    public String getMonday() {
+        return monday;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setMonday(String monday) {
+        this.monday = monday;
     }
 
-    public String getType() {
-        return type;
+    public String getTuesday() {
+        return tuesday;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setTuesday(String tuesday) {
+        this.tuesday = tuesday;
     }
 
-    public Date getDate() {
-        return date;
+    public String getWednesday() {
+        return wednesday;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setWednesday(String wednesday) {
+        this.wednesday = wednesday;
     }
 
-    public Date getTime() {
-        return time;
+    public String getThursday() {
+        return thursday;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setThursday(String thursday) {
+        this.thursday = thursday;
+    }
+
+    public String getFriday() {
+        return friday;
+    }
+
+    public void setFriday(String friday) {
+        this.friday = friday;
+    }
+
+    public String getSaturday() {
+        return saturday;
+    }
+
+    public void setSaturday(String saturday) {
+        this.saturday = saturday;
+    }
+
+    public String getSunday() {
+        return sunday;
+    }
+
+    public void setSunday(String sunday) {
+        this.sunday = sunday;
     }
 }
