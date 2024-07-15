@@ -1,10 +1,11 @@
 package com.example.myremembrall;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
+
 
 public class TaskDBHandler extends SQLiteOpenHelper {
     private static final String DB_NAME = "tasksDB";
@@ -42,6 +43,24 @@ public class TaskDBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(sqLiteDatabase);
+    }
 
+    public void addTask(Tasks task) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(COL_NAME, task.getTaskName());
+        values.put(COL_MONDAY, task.getMonday());
+        values.put(COL_TUESDAY, task.getTuesday());
+        values.put(COL_WEDNESDAY, task.getWednesday());
+        values.put(COL_THURSDAY, task.getThursday());
+        values.put(COL_FRIDAY, task.getFriday());
+        values.put(COL_SATURDAY, task.getSaturday());
+        values.put(COL_SUNDAY, task.getSunday());
+
+        sqLiteDatabase.insert(TABLE_NAME, null, values);
+        sqLiteDatabase.close();
     }
 }
