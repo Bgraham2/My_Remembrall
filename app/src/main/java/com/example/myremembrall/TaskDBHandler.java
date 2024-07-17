@@ -2,9 +2,12 @@ package com.example.myremembrall;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 
 public class TaskDBHandler extends SQLiteOpenHelper {
@@ -62,5 +65,20 @@ public class TaskDBHandler extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(TABLE_NAME, null, values);
         sqLiteDatabase.close();
+    }
+
+    public ArrayList<String> getTaskNames (String day) {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursorTasks = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE COL_" + day + " = TRUE", null);
+        ArrayList<String> tasks = new ArrayList<>();
+
+        if(cursorTasks.moveToFirst()) {
+            do {
+                tasks.add(cursorTasks.getString(1));
+            } while (cursorTasks.moveToNext());
+        }
+
+        cursorTasks.close();
+        return tasks;
     }
 }
