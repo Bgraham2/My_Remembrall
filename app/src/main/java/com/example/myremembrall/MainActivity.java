@@ -64,12 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        refresh.setOnClickListener(view -> refresh());
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,5 +78,9 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd-MM-yyyy");
         date = findViewById(R.id.textViewDayDate);
         date.setText(sdf.format(new Date()));
+    }
+
+    private void refresh() {
+
     }
 }
